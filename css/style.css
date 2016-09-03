@@ -1,0 +1,220 @@
+/*
+Theme Name: Finance Mobility Theme
+Theme URI: 
+Author: Jemaar Paul Libres
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 
+*/
+
+
+
+/* ---------* Reset CSS *------------ */
+* { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+}
+html,body { 
+	height: 100%;
+    background-color: #fff;
+}
+body {
+	font-family: arial, sans-serif;
+
+}
+h1 { 
+    font-size: 2.2em; 
+} 
+h2 { 
+    font-size: 2.0em;     
+} 
+h3 { 
+    font-size: 1.8em; 
+} 
+h4 { 
+    font-size: 1.6em;     
+} 
+h5 { 
+    font-size: 1.4em;     
+} 
+p { 
+    font-size: 1.2em;     
+}
+
+
+/*
+/* ---------* end: Reset CSS *------- */
+
+
+/* ---------* Header *---------------- */
+
+@media screen and (max-width: 767px){
+	header .header-right {
+	    display: none;
+	}
+
+	header .logo img{
+	    width: 60%;
+	    height: auto;
+	    margin: 0 auto;
+	}
+
+	header .logo{
+		text-align: center;
+	}
+}
+header{
+	padding: 0 0 5px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: url(../img/trans-icuaj.png);
+}
+
+
+header .logo{
+	padding: 0 15px;
+}
+
+header .header-right{
+	font-weight: 400;
+    padding-top: 5px;
+    color: #ccc;
+	font-size: 14px;
+}
+
+header .header-right span{
+	color: #7aadcf;
+}
+
+
+
+
+
+/* ---------* end: Header *----------- */
+
+
+/* ---------* Body *------------------ */
+
+.bg{
+	background: url(../img/static-city1.jpg) no-repeat center top;
+	background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 767px){
+	.content {
+	    top: 80px !important;
+	}
+
+	.content .form-container h2,.form-content p{
+		font-size: 18px !important;
+	}
+
+	.input,.inp-btn{
+		width: 100% !important;
+	    margin-bottom: 10px;
+	}
+
+}
+
+.content{
+	position: absolute;
+    z-index: 50;
+    top: 280px;
+    width: 100%;
+}
+
+.content .form-container{
+	margin: 0 auto;
+    float: none;
+}
+
+.content .form-container h2{
+	background: url(../img/trans2.png);
+	border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 10px;
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0;
+    border-bottom: solid 1px #aaa;
+    color: #0b486b;
+}
+
+.form-content{
+	border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 5px 20px 20px 20px;
+    font-weight: 300;
+    color: #fff;
+    background: url(../img/trans-icuaj.png);
+}
+
+.form-content p{
+	font-size: 24px;
+}
+
+.form-content .input{
+	width: 235px;
+    float: left;
+    margin-right: 10px;
+}
+
+.form-content .inp-btn{
+	width: 120px;
+    float: left;
+}
+
+.inp-btn button{
+	background-color: #ff8d00;
+}
+
+.inp-btn button:hover{
+	background-color: #ffb700;
+}
+/* ---------* end: Body *------------- */
+
+
+/* ---------* Footer *---------------- */
+
+footer{
+	width: 100%;
+    padding: 10px 0 10px 0;
+    opacity: 0.5;
+	position: fixed;
+    bottom: 0px;
+    z-index: 150;
+    color: #333;
+    background: #fff;
+}
+footer a{
+	color: #333;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 767px){
+	footer .col-md-6 {
+	    text-align: center !important;
+	    font-size: 12px;
+	}
+}
+/* ---------* end: Footer *----------- */
+
+
+/* ---------* Custom *---------------- */
+
+/* ---------* end: Custom *----------- */
+
+
+/* ---------* Override *---- */
+
+/* ---------* end: Override *--------- */

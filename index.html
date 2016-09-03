@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finance Mobility</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+	<div class="bg"></div>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-lg-6 logo">
+					<img src="img/logo.png">		
+				</div>
+				<div class="col-md-6 col-sm-6 col-lg-6 text-right header-right">
+					<span>Find a new job hiring today.</span><br>
+					Looking for exciting jobs or a new career?	
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7 col-md-7 col-lg-7 text-center form-container">
+					<h2>Start Here</h2>		
+					<div class="form-content">
+						<p>Select a position, we'll find what's out there</p>
+						<div class="input">
+							<select name="search" id="search" class="form-control" required>
+	                            <option value="">- Choose One -</option>
+	                            <option value="Accounting">Accounting</option>
+							    <option value="Clerical">Admin/Clerical</option>
+							    <option value="Automotive">Automotive</option>
+							    <option value="Aviation">Aviation</option>
+							    <option value="Banking">Banking</option>
+							    <option value="Pharmaceutical">Biotechnology/Pharmaceutical</option>
+							    <option value="Building">Building/Facilities</option>
+							    <option value="Childcare">Childcare</option>
+							    <option value="Media">Communications/Media/Writers</option>
+							    <option value="Construction">Construction/Trades</option>
+							    <option value="Customer Service">Customer Service</option>
+							    <option value="Education">Education</option>
+							    <option value="Emergency">Emergency/Fire</option>
+							    <option value="Engineering">Engineering</option>
+							    <option value="Executive">Executive</option>
+							    <option value="Finance">Finance</option>
+							    <option value="Government">Government</option>
+							    <option value="Insurance">Insurance</option>
+							    <option value="Health Care">Healthcare</option>
+							    <option value="Hospitality">Hospitality</option>
+							    <option value="Part-Time">Hourly</option>
+							    <option value="Human Resources">HR</option>
+							    <option value="Journalism">Journalism</option>
+							    <option value="Law Enforcement">Law Enforcement</option>
+							    <option value="Legal">Legal</option>
+							    <option value="Manufacturing">Manufacturing/Production</option>
+							    <option value="Marketing">Marketing</option>
+							    <option value="Non-profit">Non-Profit</option>
+							    <option value="Energy">Oil/Energy/Power</option>
+							    <option value="Real State">Real Estate</option>
+							    <option value="Restaurant">Restaurant</option>
+							    <option value="Retail">Retail</option>
+							    <option value="Sales">Sales</option>
+							    <option value="Beauty">Salon/Beauty/Fitness</option>
+							    <option value="Security">Security</option>
+							    <option value="Social Services">Social Services</option>
+							    <option value="Logistics">Supply Chain/Logistics</option>
+							    <option value="Information Technology">Technology</option>
+							    <option value="Telecommunications">Telecommunications</option>
+							    <option value="Transportation">Transportation</option>
+							    <option value="Transportation">Travel/Tourism</option>
+							    <option value="Veterinary">Vet/Animal Services</option>
+	                            <option value="">Other</option>
+	                        </select>
+						</div>
+						<div class="input">
+							<input id="zip" name="zip" type="number" value placeholder="Zip Code" class="form-control" style="color:#333;" required>
+						</div>
+						<div class="inp-btn">
+							<button id="send" class="btn btn-warning form-control btn-submit"><i class="fa fa-search fa-lg"></i> SEARCH</button>
+						</div>
+
+						<div class="clearfix"></div>
+					</div>
+					<br>
+					<div class="alert alert-info" hidden>Success !</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					&copy;
+					<span class="year">2016 </span>
+					iCouldUseaJob.com All Rights Reserved.
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 text-right">
+					<a href="terms.html">Terms of Service</a>
+					|
+					<a href="privacy.html">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	$("#send").click(function(){
+		var a = $("#search").val();
+        var b = $("#zip").val();
+
+        var dataString = {
+        	data: a + "  " + b,
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: dataString,
+            success: function(aw){
+            	$('.alert').fadeIn(1000);
+            	console.log(aw);
+            },
+            error:function(e){
+            	console.log(e);
+            }
+        });
+
+        return false;
+	});
+	</script>
+</body>
+</html>
